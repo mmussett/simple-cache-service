@@ -1,0 +1,17 @@
+{
+	"ImportPath": "github.com/mmussett/simple_cache_service",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.2-5-ge48e440",
+			"Rev": "e48e440e4c92e3251d812f8ce7858944dfa3331c"
+		},
+		{
+			"ImportPath": "github.com/patrickmn/go-cache",
+			"Comment": "v2.1.0-1-g9f6ff22",
+			"Rev": "9f6ff22cfff829561052f5886ec80a2ac148b4eb"
+		}
+	]
+}
