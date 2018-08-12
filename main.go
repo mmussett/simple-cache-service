@@ -57,9 +57,10 @@ func PostCacheHandler(w http.ResponseWriter, r *http.Request) {
 	} else {
 		_, found := c.Get(cacheObject.ID)
 		if found {
-			c.Delete(cacheObject.ID)
+			c.Replace(cacheObject.ID, cacheObject.Value, cache.NoExpiration)
+		} else {
+			c.Add(cacheObject.ID, cacheObject.Value, cache.NoExpiration)
 		}
-		c.Add(cacheObject.ID, cacheObject.Value, cache.NoExpiration)
 		w.WriteHeader(http.StatusOK)
 	}
 
