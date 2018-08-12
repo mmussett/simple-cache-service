@@ -2,11 +2,31 @@
 
 A simple in-memory name-value cache service
 
-## Building
+## Building from source
+
+### Using godep to build
+
+If you haven't got godeps installed, do:
+```bash
+go get github.com/tools/godep
+```
+
+then
+
+```bash
+godep restore
+go build -o simple-cache-service
+```
+
+## Dockerizing
+
+Docker script provided will build using container version of go
+
+### Building
 
 docker build -t mmussett/golang-simple-cache-service .
 
-## Running
+### Running
 
 docker run -d -p 8080:8080 --name scs mmussett/golang-simple-cache-service
 
