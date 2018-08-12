@@ -2,8 +2,16 @@
 
 A simple in-memory name-value cache service
 
+## Building
 
-Cache JSON object format
+docker build -t mmussett/golang-simple-cache-service .
+
+## Running
+
+docker run -d -p 8080:8080 mmussett/golang-simple-cache-service
+
+
+## Cache JSON object format
 
 ```json
 {
@@ -28,4 +36,6 @@ curl -vk -X PUT -d '{"id":"1","value":"hello,world"}' 'http://localhost:8080/cac
 ## Removing from the cache
 
 curl -vk -X DELETE 'http://localhost:8080/cache/1'
+
+
 
