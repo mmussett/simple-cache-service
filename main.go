@@ -35,7 +35,7 @@ func GetCacheHandler(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusInternalServerError)
 		} else {
 			fmt.Fprintln(w, string(s))
-			w.Header().Set("Content-Type", "application/json")
+			w.Header().Add("Content-Type", "application/json")
 			w.WriteHeader(http.StatusOK)
 		}
 	} else {
